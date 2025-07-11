@@ -1,10 +1,15 @@
-name: Jupyter Notebook Runner
+name: Jupyter Notebook Runner - Johnny Dev
 
 on:
   push:
     branches:
-      - main
-  workflow_dispatch:
+      - johnny-dev
+  workflow_dispatch:    # 允许手动触发
+    inputs:            # （可选）定义输入参数
+      environment:
+        description: 'Deploy Environment'
+        required: true
+        default: 'staging'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
