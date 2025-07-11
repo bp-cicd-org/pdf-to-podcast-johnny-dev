@@ -1,4 +1,4 @@
-name: Jupyter Notebook Runner - Johnny Dev Main
+name: Johnny Dev Main arc-runner-set-oke-org-poc
 
 on:
   push:
@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  run-notebook:
+  Explore-Github-Actions:
     runs-on: arc-runner-set-oke-org-poc
     # runs-on: arc-runner-set-oke-org-nv-ai-bp
     env:
