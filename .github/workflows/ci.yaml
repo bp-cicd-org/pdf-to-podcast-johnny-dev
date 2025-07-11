@@ -17,8 +17,8 @@ concurrency:
 
 jobs:
   Explore-Github-Actions:
-    # runs-on: arc-runner-set-oke-org-poc
-    runs-on: arc-runner-set-oke-org-nv-ai-bp
+    runs-on: arc-runner-set-oke-org-poc
+    # runs-on: arc-runner-set-oke-org-nv-ai-bp
     env:
       NOTEBOOK_PATH: ./launchable/PDFtoPodcast.ipynb
       PYTHON_VERSION: 3.12
