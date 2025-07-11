@@ -1,4 +1,5 @@
-name: Johnny Dev Main arc-runner-set-oke-org-nv-ai-bp
+name: Johnny Dev Main arc-runner-set-oke-poc
+# name: Johnny Dev Main arc-runner-set-oke-org-nv-ai-bp
 
 on:
   push:
@@ -17,8 +18,8 @@ concurrency:
 
 jobs:
   Explore-Github-Actions:
-    # runs-on: arc-runner-set-oke-org-poc
-    runs-on: arc-runner-set-oke-org-nv-ai-bp
+    runs-on: arc-runner-set-oke-org-poc
+    # runs-on: arc-runner-set-oke-org-nv-ai-bp
     env:
       NOTEBOOK_PATH: ./launchable/PDFtoPodcast.ipynb
       PYTHON_VERSION: 3.12
@@ -36,10 +37,14 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: Install software
+        run: |
+          sudo apt update && sudo apt install -y pciutils
       - name: Check System Info
         run: |
           echo "=== OS Info ==="
           uname -a  # Linux/macOS
+          cat /etc/os-release
           
           echo "=== CPU Info ==="
           lscpu || sysctl -n machdep.cpu.brand_string  # Linux | macOS
