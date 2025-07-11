@@ -1,9 +1,9 @@
-name: Jupyter Notebook Runner - Johnny Dev
+name: Jupyter Notebook Runner - Johnny Dev Main
 
 on:
   push:
     branches:
-      - johnny-dev
+      - main
   workflow_dispatch:    # 允许手动触发
     inputs:            # （可选）定义输入参数
       environment:
